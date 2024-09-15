@@ -1,9 +1,10 @@
 // src/components/Contact.jsx
 import React, { useState } from 'react';
-import axios from '../api/axios'; // Import the configured axios instance
+import axios from 'axios'; // Import the configured axios instance
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from 'react-icons/fa';
 
 const Contact = () => {
+  const BACKEND_URL = import.meta.env.BACKEND_URL;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,7 +26,7 @@ const Contact = () => {
     setLoading(true); // Set loading state to true
 
     try {
-      const response = await axios.post('/contact', formData);
+      const response = await axios.post(`https://portfolio-backend-lime.vercel.app/contact`, formData);
       console.log('Response:', response.data); // Log response
       alert('Message sent successfully!');
       // Reset the form after successful submission

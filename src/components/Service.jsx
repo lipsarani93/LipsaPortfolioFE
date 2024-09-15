@@ -1,14 +1,15 @@
 // src/components/Service.jsx
 import React, { useEffect, useState } from 'react';
-import axios from '../api/axios'; // Import the configured axios instance
+import axios from 'axios';// Import the configured axios instance
 
 const Service = () => {
   const [services, setServices] = useState([]);
+  const BACKEND_URL = import.meta.env.BACKEND_URL;
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/services'); // Adjust the endpoint
+        const response = await axios.get(`https://portfolio-backend-lime.vercel.app/api/services`); // Adjust the endpoint
         setServices(response.data.response);
         console.log(response.data.response);
       } catch (error) {
