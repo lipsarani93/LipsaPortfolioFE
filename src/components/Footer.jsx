@@ -5,12 +5,13 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-i
 const Footer = () => {
 
     const [email, setEmail] = useState('');
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('https://portfolio-backend-lime.vercel.app/api/subscribe', { email });
+      const res = await axios.post(`${backendURL}/api/subscribe`, { email });
       alert(res.data.msg);
       setEmail("");
     } catch (err) {
