@@ -10,7 +10,7 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/api/subscribe', { email });
+      const res = await axios.post('https://portfolio-backend-lime.vercel.app/api/subscribe', { email });
       alert(res.data.msg);
       setEmail("");
     } catch (err) {

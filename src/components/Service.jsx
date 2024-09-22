@@ -8,7 +8,7 @@ const Service = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/services'); // Adjust the endpoint
+        const response = await axios.get('https://portfolio-backend-lime.vercel.app/api/services'); // Adjust the endpoint
         setServices(response.data.response);
         console.log(response.data.response);
       } catch (error) {
