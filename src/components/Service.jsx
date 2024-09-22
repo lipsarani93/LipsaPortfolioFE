@@ -16,7 +16,6 @@ const Service = () => {
         console.error('Error fetching services:', error);
       }
     };
-
     fetchServices();
   }, []);
 
