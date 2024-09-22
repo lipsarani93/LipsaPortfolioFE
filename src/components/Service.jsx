@@ -4,6 +4,7 @@ import axios from '../api/axios'; // Import the configured axios instance
 
 const Service = () => {
   const [services, setServices] = useState([]);
+  
   const backendURL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
