@@ -5,6 +5,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-i
 const Footer = () => {
 
     const [email, setEmail] = useState('');
+    
     const backendURL = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
