@@ -25,12 +25,16 @@ const Navbar = () => {
     }
   }, [isMobile]);
 
+  
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-black text-white px-4 md:px-6 lg:px-12 z-50">
       <div className="container mx-auto py-2 flex items-center">
         {/* Logo on the left */}
         <div className="logo flex-shrink-0">
+          <a href="/">
           <img className="w-16 md:w-24 lg:w-32" src={logo} alt="Logo" />
+          </a>
         </div>
 
         {/* Menu items (hidden on small screens, visible on medium and up) */}

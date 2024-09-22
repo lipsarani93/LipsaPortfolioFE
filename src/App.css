@@ -1,2 +1,27 @@
 
-
+#contact {
+    scroll-margin-top: 100px; /* Default value for mobile devices */
+  }
+  
+  @media (min-width: 768px) { /* Medium devices (tablets) */
+    #contact {
+      scroll-margin-top: 120px; /* Adjust based on your navbar height */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Large devices (desktops) */
+    #contact {
+      scroll-margin-top: 150px; /* Adjust based on your navbar height */
+    }
+  }
+  
+  
+  #project {
+    scroll-margin-top: 67px; /* Adjust this value based on your navbar's height */
+  }
+  #service {
+    scroll-margin-top: 67px; /* Adjust this value based on your navbar's height */
+  }
+  #about {
+    scroll-margin-top: 65px; /* Adjust this value based on your navbar's height */
+  }

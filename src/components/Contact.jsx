@@ -1,10 +1,9 @@
 // src/components/Contact.jsx
 import React, { useState } from 'react';
-import axios from 'axios'; // Import the configured axios instance
+import axios from '../api/axios'; // Import the configured axios instance
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from 'react-icons/fa';
 
 const Contact = () => {
-  const BACKEND_URL = import.meta.env.BACKEND_URL;
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,7 +25,7 @@ const Contact = () => {
     setLoading(true); // Set loading state to true
 
     try {
-      const response = await axios.post(`https://portfolio-backend-lime.vercel.app/contact`, formData);
+      const response = await axios.post('/contact', formData);
       console.log('Response:', response.data); // Log response
       alert('Message sent successfully!');
       // Reset the form after successful submission
@@ -51,20 +50,19 @@ const Contact = () => {
         <h2 className='text-4xl font-bold text-center mb-12'>Contact Me</h2>
         <div className='flex flex-col md:flex-row items-center md:space-x-12'>
           <div className='flex-1'>
-            <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-4'>Let's Talk</h3>
-            <p className='mt-4'>I'm open to discussing web development projects or partnership opportunities</p>
+            <h3 className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-4'>Let's Connect</h3>
+            <p className='mt-4'>I welcome the opportunity to discuss web development projects that can elevate your business. Together, we can create a website that brings your vision to life and helps grow your business through the digital world.</p>
             <div className='mb-4 mt-8'>
               <FaEnvelope className='inline-block text-green-400 mr-2' />
-              <a href="mailto:youremail@example.com" className='hover:underline'>youremail@example.com</a>
+              <a href="mailto:lipsaranimoharana93@gmail.com" className='hover:underline'>lipsaranimoharana93@gmail.com</a>
             </div>
             <div className='mb-4'>
+              <a href="#contact">
               <FaPhone className='inline-block text-green-400 mr-2' />
-              <span>+918249343956</span>
+              </a>
+              <span>Send a message to connect</span>
             </div>
-            <div className='mb-4'>
-              <FaMapMarkedAlt className='inline-block text-green-400 mr-2' />
-              <span>Cuttack</span>
-            </div>
+            
           </div>
 
           <div className='flex-1 w-full'>

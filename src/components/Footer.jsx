@@ -5,13 +5,12 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMedium } from 'react-i
 const Footer = () => {
 
     const [email, setEmail] = useState('');
-    const BACKEND_URL = import.meta.env.BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`https://portfolio-backend-lime.vercel.app/api/subscribe`, { email });
+      const res = await axios.post('http://localhost:5000/api/subscribe', { email });
       alert(res.data.msg);
       setEmail("");
     } catch (err) {
@@ -51,18 +50,12 @@ const Footer = () => {
                 &copy;{new Date().getFullYear()} Lipsarani Moharana. All Rights Reserved.
             </p>
             <div className='flex space-x-4 my-4 md:my-0'>
-                <a href="#" className='text-gray-400 hover:text-white'>
-                    <FaFacebook/>
-                </a>
-                <a href="#" className='text-gray-400 hover:text-white'>
-                    <FaInstagram/>
-                </a>
+                
                 <a href="#" className='text-gray-400 hover:text-white'>
                     <FaLinkedin/>
                 </a>
-                <a href="#" className='text-gray-400 hover:text-white'>
-                    <FaMedium/>
-                </a>
+                
+                
                 <a href="#" className='text-gray-400 hover:text-white'>
                     <FaGithub/>
                 </a>
@@ -71,7 +64,7 @@ const Footer = () => {
                 <a href="#" className='text-gray-400 hover:text-white'>
                     Privacy
                 </a>
-                <a hhref="#" className='text-gray-400 hover:text-white'>
+                <a href="#" className='text-gray-400 hover:text-white'>
                     Terms of Services
                 </a>
             </div>
