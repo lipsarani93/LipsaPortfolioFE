@@ -16,9 +16,9 @@ const About = () => {
             </p>
             <div className='space-y-4'>
               {[
-                { label: 'HTML & CSS', width: '10/12' },
+                { label: 'HTML & CSS', width: '11/12' },
                 { label: 'React JS', width: '11/12' },
-                { label: 'Node JS', width: '9/12' },
+                { label: 'Node JS', width: '7/12' },
                 { label: 'SQL', width: '10/12' },
               ].map(skill => (
                 <div className='flex items-center' key={skill.label}>

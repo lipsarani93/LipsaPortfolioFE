@@ -1,26 +1,29 @@
 import React from 'react'
-import img from '../assets/hoodie.jpg'
+import gym from '../assets/gym.jpg'
+import fashion from '../assets/fashion.webp'
+import protein from '../assets/protein.jpg'
+
 
 const projects = [
     {
         id: 1,
-        name: "Blog App",
+        name: "Core Fitness Gym",
         technologies: "MERN Stack",
-        image: img,
+        image: gym,
         github: "https://github.com/lipsarani93"
     },
     {
         id: 2,
-        name: "Blog App",
+        name: "Nutrition Point",
         technologies: "MERN Stack",
-        image: img,
+        image: protein,
         github: "https://github.com/lipsarani93"
     },
     {
         id: 3,
-        name: "Blog App",
+        name: "ReStyle",
         technologies: "MERN Stack",
-        image: img,
+        image: fashion,
         github: "https://github.com/lipsarani93"
     },
     
